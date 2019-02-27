@@ -1,0 +1,56 @@
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.8.3/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.8.3/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0"></script>
+    <script type="text/babel">
+
+    const rootElement = document.getElementById('root');
+
+    // ********************** 1 ***********************
+    // const element = React.createElement('div', {className : 'container'}, 'Hello World', 'Goodbye World');
+    // ************************************************
+
+
+    // ********************** 2 ***********************
+    // const element = React.createElement('div', {className : 'container', children:[ 'Hello World','Goodbye World']});
+    // ************************************************
+
+
+    // ********************** 3 ***********************
+    // const element = <div className = 'container'>Hello World</div>;
+    // ************************************************
+
+
+    // ********************** 4 ***********************
+    // const content = 'Hello World';
+    // const element = <div className='container'>{(() => content)()}</div>;
+    // ************************************************
+
+
+    // ********************** 5 ***********************
+    // const helloWorld = <div>Hello World</div>
+    // const goodbyrWorld = <div>Goodbye World</div>
+    // const element = (
+    //     <div className = "container">
+    //         {helloWorld}
+    //         {goodbyrWorld}
+    //     </div>
+    // )
+    // ************************************************
+    
+
+    // ********************** 6 ***********************
+    const Message = props => <div> {props.children} </div>
+    const element = (
+    <div className = "container">
+        <Message><b> Hello World!!! </b></Message>
+        <Message><i> Goodbye World...</i></Message>
+    </div>
+    )
+
+    ReactDOM.render(element, rootElement);
+
+    </script>
+
+</body>
