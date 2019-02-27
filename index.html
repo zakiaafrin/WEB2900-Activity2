@@ -8,7 +8,13 @@
     const rootElement = document.getElementById('root');
 
     // ********************** 1 ***********************
-    // const element = React.createElement('div', {className : 'container'}, 'Hello World', 'Goodbye World');
+    const Message = props => <div> {props.children} </div>
+    const element = (
+    <div className = "container">
+        <Message><b> Hello World!!! </b></Message>
+        <Message><i> Goodbye World...</i></Message>
+    </div>
+    )   
     // ************************************************
 
 
@@ -38,16 +44,11 @@
     //     </div>
     // )
     // ************************************************
-    
+
 
     // ********************** 6 ***********************
-    const Message = props => <div> {props.children} </div>
-    const element = (
-    <div className = "container">
-        <Message><b> Hello World!!! </b></Message>
-        <Message><i> Goodbye World...</i></Message>
-    </div>
-    )
+     // const element = React.createElement('div', {className : 'container'}, 'Hello World', 'Goodbye World');
+    // ************************************************
 
     ReactDOM.render(element, rootElement);
 
